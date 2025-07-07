@@ -20,7 +20,7 @@ return {
 
 ## Usage
 
-After the plugin installed, use these commands below:
+After the plugin loaded, use these commands below:
 
 `:FileEncodeReload` - Reload current buffer(file) with selected file encoding
 
