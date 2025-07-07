@@ -9,6 +9,6 @@ if not ok then
 end
 
 -- create plugin command
-vim.api.nvim_create_user_command('FileEncodeRelaod', encode.show_reload_select_menu, {})
+vim.api.nvim_create_user_command('FileEncodeReload', encode.show_reload_select_menu, {})
 vim.api.nvim_create_user_command('FileEncodeSave', encode.show_save_select_menu, {})
 EOF
