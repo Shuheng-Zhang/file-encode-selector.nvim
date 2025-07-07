@@ -14,4 +14,5 @@ vim.api.nvim_create_user_command('FileEncodeSave', encode.show_save_select_menu,
 EOF
 
 " Set default key mapping
-nnoremap <silent> <leader>fe :FileEncodeSelect<CR>
+nnoremap <silent> <leader>fe :FileEncodeRelaod<CR>
+nnoremap <silent> <leader>fE :FileEncodeSave<CR>
