@@ -8,13 +8,13 @@ Install by using `lazy`:
 
 ```lua
 return {
-	"Shuheng-Zhang/file-encode-selector.nvim",
-    dependencies = { "nvim-telescope/telescope.nvim" },
-	opts = {},
-	keys = { -- set keymapings
-		{ "<leader>fe", "<cmd>FileEncodeReload<cr>", desc = "Select encoding to reload file" },
-		{ "<leader>fE", "<cmd>FileEncodeSave<cr>", desc = "Select encoding to save file" },
-	},
+  "Shuheng-Zhang/file-encode-selector.nvim",
+  dependencies = { "nvim-telescope/telescope.nvim" },
+  opts = {},
+  keys = { -- set keymapings
+	{ "<leader>fe", "<cmd>FileEncodeReload<cr>", desc = "Select encoding to reload file" },
+	{ "<leader>fE", "<cmd>FileEncodeSave<cr>", desc = "Select encoding to save file" },
+  },
 }
 ```
 
