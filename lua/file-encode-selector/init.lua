@@ -31,7 +31,7 @@ end
 --- Set file encoding with selected
 --- @param encoding string supported encoding that selected
 function M.set_encoding(encoding)
-	if encoding or encoding == "" then
+	if not encoding or encoding == "" then
 		vim.notify("[file-encodde-selector] No encoding selected", vim.log.levels.ERROR)
 		return
 	end
@@ -44,7 +44,7 @@ function M.set_encoding(encoding)
 	local view = vim.fn.winsaveview()
 
 	-- set encoding
-	-- vim.cmd("set encoding=" .. encoding)
+	vim.cmd("set encoding=" .. encoding)
 	vim.cmd("e! ++enc=" .. encoding)
 	-- vim.cmd("set fileencoding=" .. encoding)
 
