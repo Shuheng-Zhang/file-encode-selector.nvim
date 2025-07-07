@@ -42,9 +42,10 @@ function M.set_encoding(encoding)
 	-- save current view state
 	local view = vim.fn.winsaveview()
 
-	-- set file encoding
-	vim.cmd("set fileencoding=" .. encoding)
+	-- set encoding
+	vim.cmd("set encoding=" .. encoding)
 	vim.cmd("e! ++enc=" .. encoding)
+	vim.cmd("set fileencoding=" .. encoding)
 
 	-- restore view state
 	vim.fn.winrestview(view)
@@ -52,7 +53,8 @@ function M.set_encoding(encoding)
 	-- restore buffer modifiy state
 	vim.api.nvim_set_option_value("modified", modified, { buf = buf })
 
-	print("[file-encodde-selector] Set encoding to " .. encoding)
+	-- print("[file-encodde-selector] Set encoding to " .. encoding)
+	vim.notify("[file-encodde-selector] Set encoding to: " .. encoding, vim.log.levels.INFO)
 end
 
 --- Show select menu for selecting file encoding
