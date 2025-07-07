@@ -68,6 +68,7 @@ function M.set_file_encoding(encoding)
 	local view = vim.fn.winsaveview()
 
 	vim.cmd("set fileencoding=" .. encoding)
+	vim.cmd("w")
 
 	-- restore view state
 	vim.fn.winrestview(view)
