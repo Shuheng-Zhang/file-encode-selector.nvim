@@ -32,6 +32,7 @@ end
 --- @param encoding string supported encoding that selected
 function M.set_encoding(encoding)
 	if encoding or encoding == "" then
+		vim.notify("[file-encodde-selector] No encoding selected", vim.log.levels.ERROR)
 		return
 	end
 
@@ -66,6 +67,7 @@ function M.show_select_menu()
 		end,
 	}, function(choice)
 		if choice then
+			vim.notify("[file-encodde-selector] selected encoding: " .. choice)
 			M.set_encoding(choice)
 		end
 	end)
