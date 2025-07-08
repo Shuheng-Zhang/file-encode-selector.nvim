@@ -9,7 +9,7 @@ return function(opts)
 	opts = opts or {}
 	pickers
 		.new(opts, {
-			prompt_title = "Reload File Encodings",
+			prompt_title = "Reopen with encoding",
 			finder = finders.new_table({
 				results = encode_selector.encodings,
 				entry_maker = function(entry)
@@ -34,7 +34,7 @@ return function(opts)
 
 	pickers
 		.new(opts, {
-			prompt_title = "Save File Encodings",
+			prompt_title = "Save with encoding",
 			finder = finders.new_table({
 				results = encode_selector.encodings,
 				entry_maker = function(entry)

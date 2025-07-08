@@ -81,7 +81,7 @@ end
 
 function M.show_reload_select_menu()
 	vim.ui.select(defaults.encodings, {
-		prompt = "Select file encoding: ",
+		prompt = "Reopen with encoding: ",
 		format_item = function(item)
 			return string.format("%-12s", item)
 		end,
@@ -94,7 +94,7 @@ end
 
 function M.show_save_select_menu()
 	vim.ui.select(defaults.encodings, {
-		prompt = "Select file encoding:",
+		prompt = "Save with encoding:",
 		format_item = function(item)
 			return string.format("%-12s", item)
 		end,
