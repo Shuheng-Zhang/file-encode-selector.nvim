@@ -1,4 +1,4 @@
-local encode_selector = require("file-encode-selector")
+local encode_selector = require("file-encode-selector.cmd")
 local pickers = require("telescope.pickers")
 local finders = require("telescope.finders")
 local conf = require("telescope.config").values
@@ -11,7 +11,7 @@ return function(opts)
 		.new(opts, {
 			prompt_title = "Reopen with encoding",
 			finder = finders.new_table({
-				results = encode_selector.encodings,
+				results = encode_selector.config.encodings,
 				entry_maker = function(entry)
 					return {
 						value = entry,
@@ -36,7 +36,7 @@ return function(opts)
 		.new(opts, {
 			prompt_title = "Save with encoding",
 			finder = finders.new_table({
-				results = encode_selector.encodings,
+				results = encode_selector.config.encodings,
 				entry_maker = function(entry)
 					return {
 						value = entry,
