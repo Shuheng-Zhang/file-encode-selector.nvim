@@ -12,7 +12,10 @@ function M:init(opts)
 end
 
 function M:load_cmd()
-	require("telescope").load_extension("file-encode-selector")
+	local ok, m_telescope = pcall(require, "telescope")
+	if ok then
+		m_telescope.load_extension("file-encode-selector")
+	end
 
 	vim.api.nvim_create_user_command("FileEncodeReload", function()
 		M.show_select_menu("Reopen with encoding", M.mode.RELOAD)
